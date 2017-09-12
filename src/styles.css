@@ -1,1 +1,142 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.main-content__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px; }
+.main-content__header {
+  grid-column: 1;
+  background-color: #004c40; }
+.main-content__content {
+  grid-column: 1;
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr; }
+
+@media (min-width: 700px) {
+  .main-content__container {
+    display: grid;
+    grid-template-columns: 1fr  2fr  1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px; }
+  .main-content__header {
+    grid-column: 1/ 4;
+    background-color: #004c40; }
+  .main-content__content {
+    grid-column: 2/ 3;
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 8fr 4fr; } }
+.asas {
+  width: 10px; }
+
+.header__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.header__title {
+  display: inline;
+  font-size: 2em;
+  color: #fff; }
+.header__nav-container {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+.header__nav-item {
+  padding: 15px 50px;
+  margin: 0 1em;
+  font-size: 2em;
+  color: #fff; }
+  .header__nav-item:after {
+    content: ' ';
+    height: 100%;
+    width: 2px;
+    border-bottom: 1px dashed #ececec; }
+.header__dropbtn {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: #070707;
+  background-color: #48a999;
+  border: none;
+  border-radius: 2px; }
+.header__dropdown {
+  position: relative;
+  display: inline-block; }
+.header__dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ececec;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+.header__dropdown-content a {
+  color: black;
+  padding: 1em 1.2em;
+  text-decoration: none;
+  display: block; }
+.header__dropdown-content a:hover {
+  background-color: #f1f1f1; }
+.header__dropdown:hover .header__dropdown-content {
+  display: block; }
+.header__dropdown:hover .header__dropbtn {
+  background-color: #48a999; }
+
+/*# sourceMappingURL=styles.css.map */
