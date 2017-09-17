@@ -1,0 +1,25 @@
+.recipe-item {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 10px;
+    border-left: 4px solid $color-accent-dark;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 2em;
+    color: $color-accent-dark;
+    padding: 20px 0;
+  }
+
+  &__img {
+    max-height: 150px;
+  }
+}

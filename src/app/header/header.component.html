@@ -1,11 +1,14 @@
 <div class="header__container">
-<p class="header__title">( CookBook )</p>
-<nav class="header__nav-container header">
-  <a href="#" class="header__nav-item">Recipes</a>
-  <a href="#" class="header__nav-item">Shopping list</a>
+  <p class="header__title">( CookBook )</p>
+  <nav class="header__nav-container header">
+    <a href="#"
+       class="header__nav-item"
+       (click)="onSelect('recipes')">Recipes</a>
+    <a href="#"
+       class="header__nav-item"
+       (click)="onSelect('shopping-list')">Shopping list</a>
 
-
-</nav>
+  </nav>
 
   <div class="header__dropdown">
     <button class="header__dropbtn">Manage</button>

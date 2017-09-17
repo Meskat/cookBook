@@ -1,0 +1,35 @@
+.recipes {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  &__list {
+    grid-column: 1;
+  }
+
+  &__detail {
+    grid-column: 1;
+  }
+
+
+}
+
+@media (min-width: 800px) {
+  .recipes {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      grid-gap: 60px;
+    }
+
+    &__list {
+      grid-column: 1;
+    }
+
+    &__detail {
+      grid-column: 2;
+    }
+  }
+}

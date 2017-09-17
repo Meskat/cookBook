@@ -1,0 +1,10 @@
+.recipe-list {
+
+  &__button {
+    @include button($color-primary, $font-color-light);
+  }
+
+
+
+}
+

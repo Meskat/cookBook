@@ -1,0 +1,20 @@
+.recipes__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px; }
+.recipes__list {
+  grid-column: 1; }
+.recipes__detail {
+  grid-column: 1; }
+
+@media (min-width: 800px) {
+  .recipes__container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-gap: 60px; }
+  .recipes__list {
+    grid-column: 1; }
+  .recipes__detail {
+    grid-column: 2; } }
+
+/*# sourceMappingURL=recipes.component.css.map */

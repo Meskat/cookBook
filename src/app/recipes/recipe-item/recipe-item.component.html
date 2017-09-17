@@ -1,9 +1,13 @@
-<section class="recipe-item__row">
-  <article class="recipe-item__container">
-    <app-recipe-list></app-recipe-list>
-  </article>
+<a href="#"
+   class="recipe-item__item"
+   (click)="onSelected()">
+  <div class="recipe-item__info-container">
+    <h3 class="recipe-item__title">{{recipe.name}}</h3>
+    <p class="recipe-item__desc">{{recipe.description}}</p>
+  </div>
+  <img class="recipe-item__img"
+       [src]="recipe.imgPath"
+       alt="{{recipe.name}}">
 
-  <article class="recipe-item__container">
-    <app-recipe-detail></app-recipe-detail>
-  </article>
-</section>
+</a>
+
