@@ -1,0 +1,72 @@
+.shopping-list-edit {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include title($color-accent-dark);
+  }
+
+
+  &__label {
+    @include title($color-primary);
+    padding: 0;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+  }
+
+  &__input {
+    max-width: 15em;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: .9em;
+  }
+
+  &__btn-container {
+    @include button-container();
+  }
+
+  &__button {
+    @include button($color-accent-dark, $font-color-light);
+
+    &--lighter {
+      @include button($color-primary, $font-color-light);
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .shopping-list-edit {
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      @include title($color-accent-dark);
+    }
+
+    &__label {
+      @include title($color-primary);
+      display: flex;
+      padding: 0;
+      margin-bottom: 30px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.5em;
+    }
+
+    &__input {
+      max-width: 15em;
+      margin-top: 0;
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: .9em;
+    }
+  }
+}

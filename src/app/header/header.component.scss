@@ -1,0 +1,95 @@
+.header {
+
+  &__container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-green;
+  }
+
+  &__title {
+    display: inline;
+    font-size: 2em;
+    color: $font-color-light;
+
+  }
+
+  &__nav-container {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__nav-item {
+    padding: 15px 50px;
+    margin: 0 1em;
+    font-size: 2em;
+    color: $font-color-light;
+
+    &:after {
+      content: ' ';
+      height: 100%;
+      width: 2px;
+      border-bottom: 1px dashed $color-light-gray;
+    }
+
+  }
+
+  &__dropbtn {
+    @include button( $color-accent-light, $font-color-dark);
+  }
+
+  &__dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $color-light-gray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 69px;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #ececec;
+      position: relative;
+      top: -29px;
+      left: 10px;
+    }
+
+  }
+
+  &__dropdown-content a {
+    color: black;
+    font-size: 1.2em;
+    padding: 1em 1.2em;
+    text-decoration: none;
+    display: block;
+
+    &:first-child {
+      margin-top: -10px;
+    }
+  }
+
+  &__dropdown-content a:hover {background-color: #f1f1f1}
+
+  &__dropdown:hover .header__dropdown-content,
+  &__dropdown:focus{
+    display: block;
+  }
+
+  &__dropdown:hover .header__dropbtn {
+    background-color: $color-accent-light;
+  }
+}

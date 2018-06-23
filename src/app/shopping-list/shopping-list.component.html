@@ -1,0 +1,12 @@
+<section class="shopping-list__list-and-edit-container">
+  <app-shopping-list-edit class="shopping-list__edit-shopping"></app-shopping-list-edit>
+  <article class="shopping-list__container">
+    <h1 class="shopping-list__title"> Your shopping list</h1>
+    <ul class="shopping-list__list">
+      <li *ngFor="let ingredient of ingredients"
+          class="shopping-list__list-item">
+        <span href="#">{{ingredient.name}} {{ingredient.amount}}</span>
+      </li>
+    </ul>
+  </article>
+</section>

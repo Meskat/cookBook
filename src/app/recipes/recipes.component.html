@@ -1,0 +1,13 @@
+<section class="recipes__container">
+  <app-recipe-list class="recipes__list"
+                   (selectedRecipe)="selectedRecipeDetails = $event"></app-recipe-list>
+  <app-recipe-detail *ngIf="selectedRecipeDetails; else infoText"
+                     [recipe]="selectedRecipeDetails"
+                     class="recipes__detail">
+
+  </app-recipe-detail>
+  <ng-template class="recipes__detail"
+               #infoText>
+    You can select the recipe from the list to see the details
+  </ng-template>
+</section>

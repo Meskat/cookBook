@@ -1,0 +1,13 @@
+<a href="#"
+   class="recipe-item__item"
+   (click)="onSelected()">
+  <div class="recipe-item__info-container">
+    <h3 class="recipe-item__title">{{recipe.name}}</h3>
+    <p class="recipe-item__desc">{{recipe.description}}</p>
+  </div>
+  <img class="recipe-item__img"
+       [src]="recipe.imgPath"
+       alt="{{recipe.name}}">
+
+</a>
+
