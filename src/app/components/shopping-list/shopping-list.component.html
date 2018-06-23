@@ -1,0 +1,23 @@
+<section>
+  <header>
+    <h4 class="headers"> Product </h4>
+    <h4 class="headers"> Amount </h4>
+    <h4 class="headers"> Delete</h4>
+  </header>
+
+  <div *ngFor="let ingredient of ingredients"
+       class="list-item">
+    <span>{{ingredient.label}} </span>
+    <span> {{ingredient.amount}} </span>
+    <button mat-icon-button color="accent"
+            (click)="onListItemRemove(ingredient)">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <button mat-raised-button color="primary"
+          (click)="onAllItemsRemove($event)"> Delete all
+  </button>
+</section>
+
+
+<app-shopping-list-edit></app-shopping-list-edit>

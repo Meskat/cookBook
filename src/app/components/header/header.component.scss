@@ -1,0 +1,11 @@
+.container {
+  padding: 0 34px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.active {
+  background-color: darken(#5c6bc0, 5%);
+}
+

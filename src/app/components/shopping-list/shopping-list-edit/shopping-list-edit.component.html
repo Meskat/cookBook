@@ -1,0 +1,26 @@
+<form [formGroup]="shoppingListForm"
+      (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput
+           formControlName="label"
+           placeholder="shopping list item">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           formControlName="amount"
+           placeholder="amount"
+           type="number"
+           aria-valuemax="30"
+           aria-valuemin="1">
+  </mat-form-field>
+  <div class="btn-container">
+    <button mat-raised-button
+            color="primary"> Add
+    </button>
+    <button mat-raised-button
+            type="button"
+            color="primary"
+    (click)="onFormReset()"> Clear</button>
+  </div>
+
+</form>

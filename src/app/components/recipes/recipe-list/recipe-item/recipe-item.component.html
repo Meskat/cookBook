@@ -1,0 +1,11 @@
+<mat-card routerLinkActive="active"
+          [routerLink]="[index]">
+  <div>
+    <mat-card-title> {{recipe.name}}</mat-card-title>
+    <mat-card-content>
+      <p> {{recipe.desc}} </p>
+    </mat-card-content>
+  </div>
+  <img [src]="recipe.imgPath"
+       [alt]="recipe.name">
+</mat-card>

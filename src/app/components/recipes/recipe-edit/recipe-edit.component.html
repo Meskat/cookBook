@@ -1,0 +1,52 @@
+<form [formGroup]="recipeForm"
+      (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput
+           placeholder="Recipe name"
+           formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="short description"
+           formControlName="desc">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           placeholder="upload photo"
+           formControlName="imgPath">
+  </mat-form-field>
+  <div formArrayName="ingredients"
+       class="ingredients">
+    <div *ngFor="let controls of recipeForm.get('ingredients').controls; let i = index"
+         [formGroupName]="i">
+      <mat-form-field>
+        <input matInput
+               formControlName="label"
+               placeholder="ingredient">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput
+               formControlName="amount"
+               placeholder="amount"
+               type="number"
+               aria-valuemax="30"
+               aria-valuemin="1">
+      </mat-form-field>
+    </div>
+    <button mat-icon-button
+            type="button"
+            color="primary"
+            (click)="onAddNewIngredientInputs()">
+      <i class="material-icons">add_circle_outline</i>
+    </button>
+
+
+  </div>
+
+  <button mat-raised-button
+          color="primary"
+          [disabled]="!recipeForm.valid"
+  > Save recipe
+  </button>
+</form>

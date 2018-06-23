@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1> {{recipe.name}} </h1>
+    </mat-card-title>
+    <img mat-card-images
+         [src]="recipe.imgPath"
+         [alt]="recipe.name">
+  </mat-card-header>
+  <mat-card-content>
+    <h3> Ingredients </h3>
+    <mat-list>
+      <mat-list-item *ngFor="let ingredient of recipe.ingredients">
+        <div class="ingredients">
+          {{ingredient.label}}
+          <span>{{ingredient.amount}}</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <h3> Details </h3>
+    <p></p>
+  </mat-card-content>
+
+  <div class="btn-container">
+    <button mat-raised-button color="primary"
+            (click)="addToShoppingList()"> To shopping list
+    </button>
+    <button mat-raised-button color="accent"
+            (click)="onEditRecipe()"> Edit
+    </button>
+    <button mat-raised-button color="warn"
+            (click)="onDeleteRecipe()"> Delete
+    </button>
+  </div>
+</mat-card>

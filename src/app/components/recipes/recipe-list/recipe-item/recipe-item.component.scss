@@ -1,0 +1,25 @@
+.mat-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-left: 4px solid #26a69a;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-left-color: darken(#26a69a, 10);
+    box-shadow: 0 7px 7px -2px rgba(0, 0, 0, .2),
+    0 3px 2px 0 rgba(0, 0, 0, .14),
+    0 1px 5px 0 rgba(0, 0, 0, .12);
+  }
+
+  &.active {
+    border-left: 4px solid #5c6bc0;
+  }
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}

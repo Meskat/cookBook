@@ -1,0 +1,14 @@
+@import "../../node_modules/@angular/material/theming";
+@include mat-core();
+
+$app-green: mat-palette($mat-teal, 400, 600);
+$app-blue-gray: mat-palette($mat-indigo, 400, 600);
+$app-warn: mat-palette($mat-red, 400, 600);
+
+$cook-theme: mat-light-theme(
+    $app-green,
+    $app-blue-gray,
+    $app-warn
+);
+
+@include angular-material-theme($cook-theme);
